@@ -23,10 +23,9 @@ const UserSchema = mongoose.Schema({
   }
 });
 
-const User = mongoose.model('User', UserSchema);
+const User = module.exports = mongoose.model('User', UserSchema);
 
-module.exports = {
-  User,
+module.exports.auth = {
   getUserById: function(id, callback) {
     User.findById(id, callback);
   },
@@ -34,7 +33,7 @@ module.exports = {
     let query = { username };
     User.findOne(query, callback);
   },
-  addUser: function() {
+  addUser: function(newUser, callback) {
     bcrypt.genSalt(10, (err, salt) => {
       bcrypt.hash(newUser.password, salt, (err, hash) => {
         if (err) throw err;
