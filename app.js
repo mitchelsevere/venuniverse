@@ -9,7 +9,9 @@ const config = require('./db/config');
 const app = express();
 const port = process.env.PORT || 3000;
 
-mongoose.connect(config.database);
+mongoose.connect(config.database, {
+  useMongoClient: true
+});
 mongoose.connection.on('connected', () => {
   console.log('Connected to database', config.database);
 });
