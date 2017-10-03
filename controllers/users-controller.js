@@ -14,7 +14,9 @@ usersController.create = (req, res) => {
     password: req.body.password
   });
 
-  User.addUser(newUser, (err, user) => {
+  User.auth.addUser(newUser, (err, user) => {
     err ? res.json({success: false, msg: 'Failed to register user'}) : res.json({success: true, msg: 'User registered'});
-  })
+  });
 }
+
+module.exports = usersController;
