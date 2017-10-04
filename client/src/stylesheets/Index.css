@@ -1,0 +1,40 @@
+.home-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  background: rgba(50, 50, 50, 0.5) !important;
+}
+
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+form {
+  margin-top: 5%;
+}
+
+.cover-container {
+  width: 50%;
+  text-align: center;
+}
+
+.search-btn {
+  margin-top: 4%;
+  font-size: 1.1rem;
+  padding: 1.5vh 3vw;
+}
+
+.search-select {
+  width: 50vw;
+}
