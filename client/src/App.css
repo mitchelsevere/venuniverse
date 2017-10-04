@@ -13,6 +13,9 @@ button {
   border: none !important;
   border-radius: 0 !important;
   transition: 0.5s ease-in-out;
+  margin-top: 4%;
+  font-size: 1.1rem !important;
+  padding: 1.5vh 3vw !important;
 }
 
 button:hover {
@@ -25,7 +28,6 @@ button:hover {
 
 input, select {
   border-radius: 0 !important;
-  border: none !important;
   height: 38px;
 }
 
